@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #eae9e1;
+}
