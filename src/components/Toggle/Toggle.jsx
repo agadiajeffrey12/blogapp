@@ -1,10 +1,9 @@
 import { Container, SectionContainers, Sections } from "./Togglestyle";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Toggle({ late, tre }) {
-  const handleBord = (e) => {
-    e.target.style.borderTop = "2px solid black";
-  };
+export default function Toggle({ late, tre, blo, pep, fav, text }) {
+  const navigate = useNavigate();
   return (
     <Container>
       <SectionContainers>
@@ -12,6 +11,10 @@ export default function Toggle({ late, tre }) {
           onClick={() => {
             late(true);
             tre(false);
+            blo(false);
+            pep(false);
+            fav(false);
+            text(false);
           }}
         >
           Latest
@@ -20,6 +23,10 @@ export default function Toggle({ late, tre }) {
           onClick={() => {
             late(false);
             tre(true);
+            blo(false);
+            pep(false);
+            fav(false);
+            text(false);
           }}
         >
           Trending
@@ -28,6 +35,10 @@ export default function Toggle({ late, tre }) {
           onClick={() => {
             late(false);
             tre(false);
+            blo(true);
+            pep(false);
+            fav(false);
+            text(false);
           }}
         >
           Top Bloggers
@@ -36,6 +47,10 @@ export default function Toggle({ late, tre }) {
           onClick={() => {
             late(false);
             tre(false);
+            blo(false);
+            pep(false);
+            fav(true);
+            text(false);
           }}
         >
           Favorites
@@ -44,6 +59,11 @@ export default function Toggle({ late, tre }) {
           onClick={() => {
             late(false);
             tre(false);
+            blo(false);
+            pep(false);
+            fav(false);
+            text(false);
+            navigate("/Profile");
           }}
         >
           Profile

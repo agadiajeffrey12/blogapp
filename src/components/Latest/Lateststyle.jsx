@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Image = styled.img`
   height: 14rem;
   width: 37rem;
-  border: 1px solid black;
+  // border: 1px solid black;
 `;
 
 export const Image2 = styled.img`
@@ -22,6 +22,7 @@ export const Heading = styled.div`
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  cursor: pointer;
 `;
 
 export const Text = styled.div`

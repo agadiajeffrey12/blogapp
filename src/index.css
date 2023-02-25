@@ -8,10 +8,12 @@ html{
   font-size: 10px;
 }
 
-html,body{
+/* html,body{
   overflow-x: hidden;
-}
+} */
 
 body{
   background-color: #eae9e1;
+    font-family: "Poppins", sans-serif;
+    
 }

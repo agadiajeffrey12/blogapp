@@ -1,6 +1,7 @@
 // import { Container } from "./Sidebarstyle";
 import styled from "styled-components";
 import { GiCancel } from "react-icons/gi";
+import { Navigs } from "./Sidebarstyle";
 
 const ContainerSide = styled.div`
   width: 25rem;
@@ -13,7 +14,7 @@ const ContainerSide = styled.div`
   padding: 1rem;
 `;
 
-export default function Sidebar({ sm, setSm }) {
+export default function Sidebar({ sm, setSm, tre, late, re, set }) {
   return (
     <ContainerSide control={sm}>
       <GiCancel
@@ -23,6 +24,19 @@ export default function Sidebar({ sm, setSm }) {
           setSm("-45rem");
         }}
       />
+      <Navigs
+        onClick={() => {
+          late(true);
+          tre(false);
+          re(false);
+          set(true);
+        }}
+      >
+        Home
+      </Navigs>
+      <Navigs>Favorites</Navigs>
+      <Navigs>Profile</Navigs>
+      <Navigs>Log out</Navigs>
     </ContainerSide>
   );
 }
